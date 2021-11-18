@@ -1,0 +1,1044 @@
+/*------------------------------------------------------------------
+
+    Main Style Stylesheet
+    Project:        Nevada |  Creative Material Agency Template.
+    description:    Nevada is a creative agency template using
+                    gooogle Material Design.
+    Version:        1.0
+    Author:         MR Themes.
+    Last change:    28/04/2016
+    Primary use:    Agency, Business, Portfolio and freelancer.
+
+-------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+
+[Table of contents]
+
+1.  Typography
+2.  Buttons
+3.  colors (visible on scss File)
+4.  Layout
+5.  Media Queries 
+6.  Navigation
+7.  Hero (slider)
+8.  Hero (parallax)
+9.  Hero (ParticlesBg)
+10. About Us
+11. Testimonials & Skills
+12. Portfolio
+13. Fun Facts 
+14. Services 
+15. Process
+16. Fun Facts
+17. Services
+18. Team
+19. Testimonials
+20. Newsletter
+21. Pricing
+22. Blog
+23. Contact Us
+24. Google Map 
+25. Footer
+26. Preloader
+
+-------------------------------------------------------------------*/
+
+
+/*-- Imports (only visible on scss file) --*/
+
+
+/*=======================================================
+			Typography
+========================================================*/
+
+h1 {
+    font-size: 4.6rem;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    letter-spacing: 0.12em;
+}
+
+h2 {
+    font-size: 3.56rem;
+    color: #212121;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 2.92rem;
+    color: #212121;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+
+h4 {
+    font-size: 2.28rem;
+    color: #212121;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+
+h5 {
+    font-size: 1.64rem;
+    color: #212121;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #727272;
+    line-height: 24px;
+}
+
+.timer {
+    font-size: 42px;
+    letter-spacing: 0.2em;
+}
+
+.hero-caption {
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.hero-caption .hero-text {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+}
+
+
+/*=======================================================
+			Buttons Style
+========================================================*/
+
+.btn-primary {
+    background: #546DFE;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background: #0097A7;
+}
+
+.btn-primary-dark {
+    background: #0097A7;
+    color: #FFFFFF;
+}
+
+.btn-primary-dark:hover,
+.btn-primary-dark:focus,
+.btn-primary-dark:active {
+    background: #546DFE;
+    color: #FFFFFF;
+}
+
+.btn-white {
+    background: #FFFFFF;
+    color: #212121;
+}
+
+.btn-white:hover,
+.btn-white:focus,
+.btn-white:active {
+    background: #B6B6B6;
+    color: #212121;
+}
+
+.btn-secondary {
+    background: #F3432C;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+    background: #0097A7;
+}
+
+
+/*=======================================================
+            Layout
+========================================================*/
+
+.container {
+    width: 80%;
+}
+
+
+/*=======================================================
+            Media Queries 
+========================================================*/
+
+@media (max-width: 992px) {
+    #hero h1,
+    #parallax h1,
+    #particles-bg h1 {
+        font-size: 4rem;
+    }
+    #hero h3,
+    #parallax h3,
+    #particles-bg h3 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 800px) {
+    #parallax h1,
+    #particles-bg h1 {
+        font-size: 3rem;
+    }
+    #parallax h3,
+    #particles-bg h3 {
+        font-size: 2rem;
+    }
+    #parallax .hero-caption .hero-text .btn-primary,
+    #parallax .hero-caption .hero-text .btn-secondary,
+    #particles-bg .hero-caption .hero-text .btn-primary,
+    #particles-bg .hero-caption .hero-text .btn-secondary {
+        margin-right: 0;
+    }
+    #hero .slides li .caption {
+        left: 15%;
+    }
+    #hero .slides li .caption .btn-primary,
+    #hero .slides li .caption .btn-secondary {
+        margin-right: 0;
+    }
+    #hero .caption {
+        text-align: center;
+    }
+    #hero .caption h1 {
+        font-size: 3rem;
+    }
+    #hero .caption h3 {
+        font-size: 2rem;
+    }
+    #hero .slider.fullscreen ul.indicators {
+        display: none;
+    }
+    section h2 {
+        font-size: 3rem;
+    }
+    #skills .row .col .testimonials,
+    #skills .row .col skills {
+        height: auto;
+    }
+}
+
+
+/*=======================================================
+                    Navigation
+========================================================*/
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+header nav {
+    background: none;
+    box-shadow: none;
+    height: 80px;
+}
+
+header nav .nav-wrapper .brand-logo {
+    font-size: 2rem;
+    color: #FFFFFF;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+}
+
+header nav .nav-wrapper .brand-logo span {
+    font-size: 4rem;
+}
+
+header nav .nav-wrapper .side-nav a:hover {
+    background: #546DFE;
+    color: #FFFFFF;
+}
+
+header nav .nav-wrapper .button-collapse {
+    display: block;
+    float: right;
+}
+
+header nav .nav-wrapper .button-collapse i {
+    line-height: 80px;
+    color: #FFFFFF;
+}
+
+header .top-nav-collapse {
+    background: #FFFFFF;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: all .3s ease-in-out;
+}
+
+header .top-nav-collapse .nav-wrapper .brand-logo {
+    font-size: 2rem;
+    color: #212121;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+}
+
+header .top-nav-collapse .nav-wrapper .brand-logo span {
+    color: #546DFE;
+    font-size: 4rem;
+}
+
+header .top-nav-collapse .nav-wrapper .button-collapse {
+    display: block;
+    float: right;
+}
+
+header .top-nav-collapse .nav-wrapper .button-collapse i {
+    line-height: 80px;
+    color: #212121;
+}
+
+
+/*=======================================================
+                    Hero (slider)
+========================================================*/
+
+#hero {
+    position: relative;
+    height: 100vh;
+}
+
+#hero .caption {
+    top: 30%;
+    left: 10%;
+}
+
+#hero .caption h1 {
+    font-weight: 700;
+}
+
+#hero .caption h3 {
+    color: #FFFFFF;
+}
+
+#hero .caption .btn-primary,
+#hero .caption .btn-secondary {
+    margin-right: 2.1rem;
+}
+
+#hero .indicators .indicator-item.active {
+    background: #546DFE;
+}
+
+
+/*=======================================================
+                    Hero (parallax)
+========================================================*/
+
+#parallax {
+    /* background: url(http://placehold.it/1920x1080/546DFE/000); */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#parallax h1 {
+    font-weight: 700;
+}
+
+#parallax h2 {
+    color: #000000;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+}
+
+#parallax .btn-primary,
+#parallax .btn-secondary {
+    margin-right: 2.1rem;
+}
+
+
+/*=======================================================
+                    Hero (ParticlesBg)
+========================================================*/
+
+#particles-bg {
+    background: #546DFE;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    /* ---- particles.js container ---- */
+    /* ---- stats.js ---- */
+}
+
+#particles-bg h1 {
+    font-weight: 700;
+}
+
+#particles-bg h2 {
+    color: #000000;
+    font-weight: 700;
+}
+
+#particles-bg .btn-primary,
+#particles-bg .btn-secondary {
+    margin-right: 2.1rem;
+}
+
+#particles-bg canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+#particles-bg #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#particles-bg .count-particles {
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+#particles-bg .js-count-particles {
+    font-size: 1.1em;
+}
+
+#particles-bg #stats,
+#particles-bg .count-particles {
+    -webkit-user-select: none;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#particles-bg #stats {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+
+#particles-bg .count-particles {
+    border-radius: 0 0 3px 3px;
+}
+
+
+/*=======================================================
+                    About Us
+========================================================*/
+
+#about {
+    padding: 120px 0;
+    text-align: center;
+}
+
+#about .col {
+    margin-top: 60px;
+}
+
+#about .row {
+    margin-bottom: 0px;
+}
+
+#about h2 span {
+    color: #546DFE;
+    font-size: 4rem;
+}
+
+#about .icon-box {
+    color: #F3432C;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    transition: all .3s ease-in-out;
+}
+
+#about .icon-box:hover {
+    background: #F3432C;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#about h5 {
+    margin: 30px 0;
+}
+
+#about p {
+    padding: 0 15px;
+}
+
+#about img {
+    margin-top: 40px;
+    margin-bottom: -6px;
+}
+
+
+/*=======================================================
+            Testimonials & Skills
+========================================================*/
+
+#skills .col {
+    padding: 0;
+}
+
+#skills .testimonials {
+    background: #546DFE;
+    height: 400px;
+    padding: 60px;
+    text-align: center;
+}
+
+#skills .testimonials h5 {
+    font-weight: 700;
+}
+
+#skills .testimonials h5,
+#skills .testimonials p {
+    color: #FFFFFF;
+}
+
+#skills .testimonials p {
+    font-size: 16px;
+}
+
+#skills .testimonials .owl-theme .owl-controls .owl-page span {
+    background: #FFFFFF;
+}
+
+#skills .skills {
+    background: url(http://placehold.it/1920x1080/546DFE/000);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 400px;
+    padding: 40px 60px;
+}
+
+#skills .skills h4 {
+    color: #FFFFFF;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+#skills .skills h4 span {
+    color: #F3432C;
+    font-size: 4rem;
+}
+
+#skills .skills h6 {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+#skills .skills .progress {
+    background: #FFFFFF;
+    overflow: visible;
+}
+
+#skills .skills .progress .determinate {
+    background: #F3432C;
+}
+
+#skills .skills .progress span {
+    position: absolute;
+    display: block;
+    top: -35px;
+    right: 0;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+
+/*=======================================================
+            Portfolio
+========================================================*/
+
+#portfolio {
+    padding: 120px 0;
+}
+
+#portfolio h2 {
+    text-align: center;
+}
+
+#portfolio h2 span {
+    color: #546DFE;
+    font-size: 4rem;
+}
+
+#portfolio #portfolio-items .mix {
+    display: none;
+}
+
+#portfolio .tabs {
+    margin: 60px 0;
+}
+
+#portfolio .tabs a {
+    color: #546DFE;
+}
+
+#portfolio .tabs .indicator {
+    background: #F3432C;
+}
+
+#portfolio .card a,
+#portfolio .card i {
+    color: #546DFE;
+}
+
+
+/*=======================================================
+            Fun Facts 
+========================================================*/
+
+#fun-facts {
+    background: #f9f9f9;
+    padding: 120px 0;
+    text-align: center;
+}
+
+#fun-facts .col {
+    margin-top: 60px;
+}
+
+#fun-facts h2 span {
+    color: #546DFE;
+    font-size: 4rem;
+}
+
+#fun-facts .facts-holder .icon-box {
+    display: inherit;
+    color: #546DFE;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    margin: 0.82rem auto;
+    transition: all .3s ease-in-out;
+}
+
+#fun-facts .facts-holder .icon-box:hover {
+    background: #546DFE;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#fun-facts .facts-holder span {
+    color: #212121;
+    font-weight: 700;
+}
+
+#fun-facts .facts-holder h5 {
+    color: #212121;
+}
+
+
+/*=======================================================
+            Services 
+========================================================*/
+
+#services {
+    background: url(http://placehold.it/1920x1080/546DFE/000);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 60px 0;
+}
+
+#services img {
+    padding-top: 100px;
+}
+
+#services .services-content {
+    padding: 40px;
+}
+
+#services .services-content i {
+    color: #546DFE;
+}
+
+#services .services-content h2 {
+    color: #FFFFFF;
+}
+
+#services .services-content h2 span {
+    color: #F3432C;
+    font-size: 4rem;
+}
+
+#services .services-content p {
+    color: #FFFFFF;
+}
+
+
+/*=======================================================
+            Process 
+========================================================*/
+
+#process {
+    background: url(http://placehold.it/1920x1080/F3432C/000);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 60px 0;
+}
+
+#process img {
+    padding-top: 100px;
+}
+
+#process .process-content {
+    padding: 40px;
+}
+
+#process .process-content i {
+    color: #F3432C;
+}
+
+#process .process-content h2 {
+    color: #FFFFFF;
+}
+
+#process .process-content h2 span {
+    color: #546DFE;
+    font-size: 4rem;
+}
+
+#process .process-content p {
+    color: #FFFFFF;
+}
+
+
+/*=======================================================
+            Team 
+========================================================*/
+
+#team {
+    padding: 120px 0;
+}
+
+#team h2 {
+    text-align: center;
+}
+
+#team h2 span {
+    color: #546DFE;
+    font-size: 4rem;
+}
+
+#team .team-content {
+    padding: 60px 0;
+}
+
+#team .team-content .card-title {
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 30px;
+}
+
+#team .team-content .social-media {
+    text-align: center;
+}
+
+#team .team-content .social-media li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+#team .team-content .social-media li i {
+    font-size: 1.2rem;
+}
+
+#team .team-content .skills h6 {
+    margin-bottom: 20px;
+}
+
+#team .team-content .skills .progress {
+    background: #B6B6B6;
+    overflow: visible;
+}
+
+#team .team-content .skills .progress .determinate {
+    background: #546DFE;
+}
+
+#team .team-content .skills .progress span {
+    position: absolute;
+    display: block;
+    top: -35px;
+    right: 0;
+    font-size: 12px;
+    color: #212121;
+}
+
+
+/*=======================================================
+            Newsletter 
+========================================================*/
+
+#newsletter {
+    background: #546DFE;
+    padding: 60px 0;
+}
+
+#newsletter h2 {
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#newsletter h2 span {
+    color: #F3432C;
+    font-size: 4rem;
+}
+
+#newsletter form button {
+    margin-top: 8px;
+}
+
+#newsletter form input {
+    color: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+#newsletter form label {
+    color: #FFFFFF;
+}
+
+
+/*=======================================================
+            Pricing 
+========================================================*/
+
+#pricing {
+    padding: 120px 0;
+    text-align: center;
+    /* STYLE 1 */
+}
+
+#pricing h2 span {
+    color: #546DFE;
+    font-size: 4rem;
+}
+
+#pricing .pricing.style-1 .price {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+#pricing .card {
+    margin-top: 60px;
+}
+
+#pricing .pricing .featured {
+    background: #F3432C;
+}
+
+#pricing .pricing .primary-color {
+    background: #546DFE;
+}
+
+#pricing .pricing .price {
+    padding: 15px 0;
+}
+
+#pricing .pricing .price h4,
+#pricing .pricing .price h5 {
+    text-align: center;
+}
+
+#pricing .pricing .price span {
+    display: inline-block;
+    position: relative;
+}
+
+#pricing .pricing .price .plan {
+    font-size: 25px;
+    font-weight: 200;
+}
+
+#pricing .pricing .price .amount {
+    font-size: 50px;
+    font-weight: 100;
+}
+
+#pricing .pricing .price .period {
+    font-size: 16px;
+    margin-left: -10px;
+}
+
+#pricing .pricing .price .currency {
+    font-size: 16px;
+    letter-spacing: -6px;
+    top: -20px;
+}
+
+#pricing .pricing .collection li.collection-item:hover {
+    background: #f5f5f5;
+}
+
+
+/*=======================================================
+            Blog 
+========================================================*/
+
+#blog {
+    background: #f9f9f9;
+    padding: 120px 0;
+}
+
+#blog h2 {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+#blog h2 span {
+    color: #546DFE;
+    font-size: 4rem;
+}
+
+#blog .card-action a {
+    color: #546DFE;
+    font-size: 14px;
+}
+
+#blog .card-action a i {
+    margin-right: 10px;
+    float: left;
+}
+
+
+/*=======================================================
+            Contact Us
+========================================================*/
+
+#contact {
+    background: #546DFE;
+    padding: 60px 0;
+}
+
+#contact img {
+    padding-top: 100px;
+}
+
+#contact h2 {
+    color: #FFFFFF;
+}
+
+#contact h2 span {
+    color: #F3432C;
+    font-size: 4rem;
+}
+
+#contact .contact-content {
+    padding: 40px;
+}
+
+#contact form input,
+#contact form textarea {
+    color: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+#contact form label {
+    color: #FFFFFF;
+}
+
+#contact form button {
+    margin: 1.78rem 0 1.424rem 0;
+}
+
+
+/*=======================================================
+            Google Map 
+========================================================*/
+
+#map {
+    width: 100%;
+    height: 400px;
+}
+
+
+/*=======================================================
+            Footer
+========================================================*/
+
+footer.page-footer {
+    background: #546DFE;
+    margin: 0;
+}
+
+footer.page-footer h2 {
+    font-size: 2rem;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+footer.page-footer h2 span {
+    color: #F3432C;
+    font-size: 4rem;
+}
+
+
+/*=======================================================
+            Preloader
+========================================================*/
+
+.preloader {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #FFFFFF;
+    z-index: 100000;
+}
+
+.preloader h2 {
+    font-size: 3rem;
+    color: #212121;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -120px 0 0 -90px;
+}
+
+.preloader h2 span {
+    color: #546DFE;
+    font-size: 4rem;
+}
+
+.preloader .preloader-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+}
+
+
+/*# sourceMappingURL=main.css.map */

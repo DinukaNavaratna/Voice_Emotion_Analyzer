@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- ==============================================
+    Title and Meta Tags
+    =============================================== -->
+    <meta charset="UTF-8">
+    <title>Timbre - Emotion Detection</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- ==============================================
+    CSS Files
+    =============================================== -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://use.fontawesome.com/33f079f2f4.js"></script>
+    <link type="text/css" rel="stylesheet" href="../assets/materialize-assets/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="../assets/js/plugins/OwlCarousel/owl-carousel/owl.carousel.css">
+    <link type="text/css" rel="stylesheet" href="../assets/js/plugins/OwlCarousel/owl-carousel/owl.theme.css">
+    <link type="text/css" rel="stylesheet" href="../assets/js/plugins/OwlCarousel/owl-carousel/">
+    <link type="text/css" rel="stylesheet" href="../assets/js/plugins/lightbox2-master/dist/css/lightbox.min.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/main.css">
+
+</head>
+
+<body>
+
+    <style>
+        #parallax {
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+ h2{
+    font-size: xx-large;
+ }
+ .btn-primary{
+    height: 50px;
+    border-radius: unset;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 9px;
+    width: 150px;
+}
+#custom-text {
+  margin-left: 10px;
+  font-family: sans-serif;
+  color: #aaa;
+  margin-inline-end: 25px;
+}
+img {
+    width: 175px;
+ 
+    margin-top: 25px;
+
+}
+@media screen and (max-width: 480px){
+        
+    h2{
+        font-size: x-large;
+}
+
+img {
+    width: 130px;
+    margin-top: 14px;
+}
+#custom-button
+{
+    font-size: small;
+}
+.uploadbtn{
+margin-top: 30px;
+        }
+    }
+
+    </style> 
+    
+    <!-- Preloader -->
+
+
+    <div class="preloader">
+        <h2>Timbre<span>.</span></h2>
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Navigation -->
+
+
+    <header>
+        <nav>
+            <div class="container">
+                <div class="nav-wrapper">
+                   
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons" style="color: black;">menu</i></a>
+                    <!-- Side Nav Links -->
+                    <ul class="side-nav" id="mobile-demo">
+                        <li><a href="../home.html" style="height: 100px;">
+                            <img src="../assets/img/logo.png" >     
+                                </a></li><br>
+            
+                        <li><a href="emotion-detect.html" class="page-scroll">Emotion Detection</a></li>
+                        <li><a href="../stress-detection/stress-detect.html" class="page-scroll">Stress Detection</a></li>
+                        <li><a href="#portfolio" class="page-scroll">Fluency Analysis</a></li>
+                        <li><a href="identification.html" class="page-scroll">Agent Identification</a></li>
+                  
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="parallax" class="full-screen">
+        <div class="hero-caption">
+            
+            <div class="hero-text">
+                <h2>Emotion Identification of Call Agent</h2><br><br><br>
+                <input type="file" id="real-file" hidden="hidden" />
+                <button type="button" class="btn btn-primary" id="custom-button">Choose a file</button>
+                <span id="custom-text">No file chosen, yet.</span>
+                <button type="button"class="btn btn-primary uploadbtn" onclick="analyze();">Upload file</button>
+
+            </div>
+          
+        </div>
+    </div>
+
+         <!--Import jQuery before materialize.js-->
+         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+         <script type="text/javascript" src="../assets/materialize-assets/js/materialize.min.js"></script>
+         <!-- jQuery Plugins -->
+         <script type="text/javascript" src="../assets/js/plugins/jquery.easing.min.js"></script>
+         <script type=text/javascript src="../assets/js/plugins/OwlCarousel/owl-carousel/owl.carousel.min.js"></script>
+         <script type="text/javascript" src="../assets/js/plugins/lightbox2-master/dist/js/lightbox.min.js"></script>
+         <script type="text/javascript" src="../assets/js/plugins/jquery.mixitup.min.js"></script>
+         <script type="text/javascript" src="../assets/js/plugins/inview/jquery.inview.min.js"></script>
+         <script type="text/javascript" src="../assets/js/plugins/countTo/jquery.countTo.js"></script>
+         <script src="https://maps.googleapis.com/maps/api/js"></script>
+     
+         <script type="text/javascript" src="../assets/js/custom.js"></script>
+
+         <script>
+                const realFileBtn = document.getElementById("real-file");
+                const customBtn = document.getElementById("custom-button");
+                const customTxt = document.getElementById("custom-text");
+
+                customBtn.addEventListener("click", function() {
+                realFileBtn.click();
+                });
+
+                realFileBtn.addEventListener("change", function() {
+                if (realFileBtn.value) {
+                    customTxt.innerHTML = realFileBtn.value.match(
+                    /[\/\\]([\w\d\s\.\-\(\)]+)$/
+                    )[1];
+                } else {
+                    customTxt.innerHTML = "No file chosen, yet.";
+                }
+                });
+
+                function analyze(){
+                    let file = document.getElementById("real-file").files[0];
+                    let formData = new FormData();
+                    formData.append("file", file);
+
+                    $.ajax({
+                        url: "http://localhost:5000/analyze",
+                        type: 'POST',
+                        data: formData,
+                        processData: false,
+                        mimeType: "multipart/form-data",
+                        success:function(response){
+                            //console.log("Resss: "+response);
+                            window.open("emotion-table.html?val="+response,"_self")
+                        },
+                        error: function (jqXHR, exception) {
+                            alert("Error");
+                        },
+                        cache: false,
+                        contentType: false,
+                        processData: false
+                    });
+                }
+
+         </script>
+     </body>
+     
+     </html>

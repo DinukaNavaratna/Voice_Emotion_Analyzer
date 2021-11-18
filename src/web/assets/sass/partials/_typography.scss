@@ -1,0 +1,84 @@
+// Typography Partials
+@import "colors";
+
+/*=======================================================
+			Typography
+========================================================*/
+
+// Font-Weight
+$thin:200;
+$light:300;
+$normal:400;
+$semibold:600;
+$bold:700;
+// Font Size
+$h1-size: 4.6rem;
+$h2-size: 3.56rem;
+$h3-size: 2.92rem;
+$h4-size: 2.28rem;
+$h5-size: 1.64rem;
+$h6-size: 1rem;
+$p-size: 14px;
+$quote: 48px;
+$icon-size: 36px;
+$timer: 42px;
+// Typography
+h1 {
+    font-size: $h1-size;
+    color: $primary-color-text;
+    margin-bottom: 40px;
+    letter-spacing: 0.12em;
+}
+
+h2 {
+    font-size: $h2-size;
+    color: $primary-text-color;
+    letter-spacing: 0.1em;
+    font-weight: $bold;
+}
+
+h3 {
+    font-size: $h3-size;
+    color: $primary-text-color;
+    font-weight: $normal;
+    letter-spacing: 0.1em;
+}
+
+h4 {
+    font-size: $h4-size;
+    color: $primary-text-color;
+    font-weight: $normal;
+    letter-spacing: 0.1em;
+}
+
+h5 {
+    font-size: $h5-size;
+    color: $primary-text-color;
+    font-weight: $normal;
+    letter-spacing: 0.1em;
+}
+
+p {
+    font-size: $p-size;
+    font-weight: $normal;
+    color: $secondary-text-color;
+    line-height: 24px;
+}
+
+.timer {
+    font-size: $timer;
+    letter-spacing: 0.2em;
+}
+
+.hero-caption {
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    .hero-text {
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+        height: 100%;
+    }
+}
