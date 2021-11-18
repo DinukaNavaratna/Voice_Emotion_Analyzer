@@ -1,10 +1,10 @@
-##About
+## About
 
 This is a simple website that can be used to upload an audio file containing vocals and detect the emotion of the vocals.
 The scope of this project was decided according to the requirements of a friend of mine.
 
 
-##Run the Application
+## Run the Application
 
 1. Create a Virtual Environement (Optional)
 2. Delete the .gitignore file inside the src/SER/Audio_Speech_Actors_01-24
