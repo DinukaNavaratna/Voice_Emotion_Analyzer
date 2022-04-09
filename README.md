@@ -1,7 +1,7 @@
 ## About
 
-This is a simple website that can be used to upload an audio file containing vocals and detect the emotion of the vocals.
-The scope of this project was decided according to the requirements of a friend of mine.
+This is a simple web application that can be used to upload an audio file containing vocals and detect the emotion of the vocals. The uploaded audio file will be chopped into mini clips and analyze each mini clip for the emotion. The accuracy is not very good as this was done within a limited time period and with a limited dataset provided.
+The project was completed according to the requirements of a friend of mine. Frontend of the application was provided and I assume it is a template based design taken from somewhere.
 
 
 ## Run the Application
@@ -16,3 +16,11 @@ The scope of this project was decided according to the requirements of a friend 
 8. Install the requirements inside the requirements.in & requirements.txt using PIP (Ex: pip install -r requirements.txt)
 9. Run the app.py (Ex: Python app.py)
 10. The webpage can be loaded using the emotion-detect.html file inside src/web/emotion-detection/
+
+
+## Snapshots
+![Dinuka Navaratna - Voice Emotion Analyzer (Snapshot 1)](https://user-images.githubusercontent.com/26020039/162551058-d94103d6-59e5-45cd-8b8d-d138d1aa6e03.png)
+
+![Dinuka Navaratna - Voice Emotion Analyzer (Snapshot 2)](https://user-images.githubusercontent.com/26020039/162551064-788b2e77-2f59-454f-abf7-cf2a12087e45.png)
+
+![Dinuka Navaratna - Voice Emotion Analyzer (Snapshot 3)](https://user-images.githubusercontent.com/26020039/162551067-e1b88105-8b1b-43bb-9f4a-b51504a1607c.png)
