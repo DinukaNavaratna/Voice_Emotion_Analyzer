@@ -1,7 +1,8 @@
 ## About
 
-This is a simple web application that can be used to upload an audio file containing vocals and detect the emotion of the vocals. The uploaded audio file will be chopped into mini clips and analyze each mini clip for the emotion. The accuracy is not very good as this was done within a limited time period and with a limited dataset provided.
-The project was completed according to the requirements of a friend of mine. Frontend of the application was provided and I assume it is a template based design taken from somewhere.
+This is a simple web application that can be used to upload an audio file containing vocals and detect the emotion of the vocals. The uploaded audio file will be chopped into mini clips and analyze each mini clip for the emotion. The accuracy is not very good as this was done within a limited time period and with a limited dataset provided.<br>
+The project was completed according to the requirements of a friend of mine. Frontend of the application was provided and I assume it is a template based design taken from somewhere.<br>
+Try using .wav audio files when testing because it might give an error if you try to process other types of files due to a ffmpeg issue. There are many more improvements that can be done in this project and is not guranteed to be 100% error free.
 
 
 ## Run the Application
