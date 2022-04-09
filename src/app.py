@@ -15,7 +15,11 @@ from SER.Speech_Emotion_Recognition import analyze
 app = Flask(__name__)
 CORS(app)
 
-model, lb = initialize()
+#model, lb = initialize()
+lb = LabelEncoder()
+lb.classes_ = numpy.load('classes.npy')
+
+model = tf.keras.models.load_model('model.h5')
 
 @app.route("/analyze", methods=["POST", "GET"])
 def check():
